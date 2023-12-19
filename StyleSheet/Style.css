@@ -11,6 +11,29 @@ h1{
     justify-content: flex-start;
 }
 
+#recherche{
+    display: block;
+    background-color: #E04750;
+    border: 5px #2D2D36 solid;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+    color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+a{
+    text-decoration: none;
+
+}
+
+a:visited{
+    color:inherit;
+    text-decoration: none;
+
+}
 
 #logo{
     display: block;
