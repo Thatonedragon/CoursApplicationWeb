@@ -6,10 +6,17 @@ h1{
     justify-content: center;
 }
 
+
+table{
+    border: none;
+}
+
 .tableau{
     display: flex;
     justify-content: flex-start;
 }
+
+
 
 #recherche{
     display: block;
@@ -42,4 +49,11 @@ a:visited{
     width: 90%;
     filter: blur(8px);
     -webkit-filter: blur(8px);
+}
+
+#InfoPage{
+    display: flex;
+    justify-content:space-between;
+    flex-flow: row-reverse;
+
 }
