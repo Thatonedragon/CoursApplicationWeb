@@ -1,38 +1,52 @@
 body{
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    /* Animation du fond */
+    animation: changeColor 5s infinite alternate; /* Alternance infinie toutes les 5 secondes */
+
+    
 }
+
+@keyframes changeColor {
+    from {
+        background-color: #ffcc00; /* Couleur de départ */
+    }
+    to {
+        background-color: #ff6699; /* Couleur de fin */
+    }
+}
+
 h1{
     display: flex;
     justify-content: center;
+    font-family: 'Aliment PERSONAL USE', sans-serif;
 }
 
-
-table{
-    border: none;
-}
-
-.tableau{
+h2{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    font-family: 'Aliment PERSONAL USE', sans-serif;
 }
 
-
-
-#recherche{
+nav{
     display: block;
+    width: auto;
     background-color: #E04750;
     border: 5px #2D2D36 solid;
     border-radius: 10px;
-    width: fit-content;
+
     text-align: center;
     color: aliceblue;
     margin-left: auto;
     margin-right: auto;
+    
 }
-
 
 a{
     text-decoration: none;
+    font-family: 'Aliment PERSONAL USE', sans-serif;
 
 }
 
@@ -46,14 +60,41 @@ a:visited{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    width: 100%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 
-#InfoPage{
-    display: flex;
-    justify-content:space-between;
-    flex-flow: row-reverse;
+.ouverture {
+    flex: 0 0 calc(33.33% - 20px); /* Utilisez flex pour ajuster la largeur de chaque article et calc pour gérer les marges */
+    border: 1px solid #ff0000;
+    padding: 15px;
+    margin: 10px;
+    position: relative; /* Position relative pour positionner les détails par rapport à l'article */
+    box-sizing: border-box; /* Incluez la bordure et le rembourrage dans le calcul de la largeur */
 
+}
+
+.details {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    z-index: 1; /* Pour s'assurer que les détails apparaissent au-dessus des autres éléments */
+}
+
+.ouverture:hover .details {
+    display: block;
+}
+.article p {
+    font-size: 1.2em; /* Ajustez la taille de la police du texte du paragraphe */
+}
+
+#Perso{
+    display: flex;
+    justify-content: center;
+    font-family: 'Aliment PERSONAL USE', sans-serif;
 }

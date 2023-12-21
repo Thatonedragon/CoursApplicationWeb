@@ -7,77 +7,82 @@
         <script type="text/javascript" src="./Scripts/script.js"></script>
     </head>
     <body id="Page" onload="Onstart()" >
+
         <div id="Header">
-            <img id="logo" src="./media/LogoSeul.png">
-            <h2>10.11.12 mai 2024
-                <ul>
-                    <li>Alpe d'huez-france</li>
-                </ul>
-            </h2>
+
+            <img id="logo" src="./media/LogoSeul.png"><br>
+
+            <h2>10.11.12 mai 2024   .   Alpe d'huez-france</h2>
 
             <h1>MAKER-FEST</h1>
+
+            <div id="Perso">
+                <p id="nbrvisiteur">Il y a actuellement 12 personnes, qui vistent le site</p>
+            </div>
+
             <nav id="recherche">
                 <a href="./index.html">Accueil</a>
                 <a href="./Actualité.html">Actualité</a>
                 <a href="./Billet.html">Achetez votre billet</a><!-- contient le nombre de place restant -->
-                <a href="">Partenaires</a>
                 <a href="">location</a>
-                <a href="">Qui sommes nous ?</a>
+                <a href="https://unimakers.fr">Qui sommes nous ?</a>
             </nav>
         </div>
 
+    <div id="InfoPage">
 
-        <div id="InfoPage">
-
-        <div id="Perso">
-            <p id="nbrvisiteur">Il y a actuellement 12 personnes, qui vistent le site</p>
-
-
-        </div>
-            <div id="Infos">
-            <table>
-                    <caption>Horaires d'ouverture</caption>
-                    <thread>
-                        <tr>
-                            <th class="tableau">Scène</th>
-                            <th>Vendredi</th>
-                            <th>Samedi</th>
-                            <th>Dimanche</th>
-                        </tr>
-                    </thread>
-                    <tbody>
-                        <tr>
-                            <th class="tableau">Night show</th>
-                            <td>19:00 - 00:00</td>
-                            <td>19:00 - 02:00</td>
-                            <td>19:00 - 03:00</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="tableau">Composition stage</th>
-                            <td>12:00 - 16:30</td>
-                            <td>12:00 - 17:30</td>
-                            <td>12:00 - 17:30</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            
+        <h2>Horaires d'ouverture</h2>
+        <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+            <h2>Vendredi</h2>
+            <div class="details">
+                <p>
+                    <ul>
+                        <li>12:00 - 16:30</li>>
+                        <li>>19:00 - 00:00</li>
+                    </ul>
+                </p>
+                <!-- Ajoutez plus de détails ici -->
             </div>
-            <!-- Image cliquable  -->
-   
-        </div> 
-            <nav id="contact">
-                <!-- ouvre un éditeur de mail -->
-                <a href="./mail.html">Mail</a> 
-                <!-- ouvre le composeur d'appel -->
-                <a href="">Télephone</a>
-                <a href="">Instagram</a>
-                <a href="">X</a>
-                <a href="">Youtube</a>
-                <a href="">Git-hub</a>
-                <a href="">linkedIn</a>
-            </nav>
+        </div>
+        <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+            <h2>Samedi</h2>
+            <div class="details">
+                <p>
+                    <ul>
+                        <li>12:00 - 17:30</li>>
+                        <li>>19:00 - 02:00</li>
+                    </ul>
+                </p>
+                <!-- Ajoutez plus de détails ici -->
+            </div>
+        </div>
+
+        <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+            <h2>Dimanche</h2>
+            <div class="details">
+                <p>
+                    <ul>
+                        <li>12:00 - 17:30</li>>
+                        <li>>19:00 - 03:00</li>
+                    </ul>
+                </p>
+                <!-- Ajoutez plus de détails ici -->
+            </div>
+        </div>
+        
+    </div>
+        
+    <nav id="contact">
+        <!--ouvre un éditeur de mail -->
+        <a href="./mail.html">Mail</a> 
+        <!--ouvre le composeur d'appel -->
+        <a href="">Télephone</a>
+        <a href="https://www.instagram.com/unimakers_amiens?igshid=NzZlODBkYWE4Ng%3D%3D">Instagram</a>
+        <a href="">X</a>
+        <a href="https://www.youtube.com/@UniMakersAmiens">Youtube</a>
+        <a href="https://github.com/Unimakers">Git-hub</a>
+        <a href="https://www.linkedin.com/company/unimakers-amiens">linkedIn</a>
+    </nav> 
 
     </body>
 
