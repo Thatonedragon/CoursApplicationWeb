@@ -5,16 +5,15 @@ body{
     margin: 0;
     /* Animation du fond */
     animation: changeColor 5s infinite alternate; /* Alternance infinie toutes les 5 secondes */
-
     
 }
 
 @keyframes changeColor {
     from {
-        background-color: #ffcc00; /* Couleur de départ */
+        background-color: #ffffff; /* Couleur de départ */
     }
     to {
-        background-color: #ff6699; /* Couleur de fin */
+        background-color: #9b9b9b; /* Couleur de fin */
     }
 }
 
@@ -64,6 +63,10 @@ a:visited{
     filter: blur(5px);
     -webkit-filter: blur(5px);
 }
+#InfoPage{
+    display:flex;
+
+}
 
 .ouverture {
     flex: 0 0 calc(33.33% - 20px); /* Utilisez flex pour ajuster la largeur de chaque article et calc pour gérer les marges */
@@ -72,7 +75,9 @@ a:visited{
     margin: 10px;
     position: relative; /* Position relative pour positionner les détails par rapport à l'article */
     box-sizing: border-box; /* Incluez la bordure et le rembourrage dans le calcul de la largeur */
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .details {
