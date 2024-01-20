@@ -2,6 +2,7 @@ body{
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     margin: 0;
     /* Animation du fond */
     animation: changeColor 5s infinite alternate; /* Alternance infinie toutes les 5 secondes */
@@ -29,31 +30,38 @@ h2{
     font-family: 'Aliment PERSONAL USE', sans-serif;
 }
 
+
 .icons{
     width: 30px; /* Adjust the width as needed */
     height: 30px; /* Adjust the height as needed */
-    border: 1px solid #ccc; /* Optional border */
     border-radius: 5px; /* Optional border radius */
+    transition: all 0.2s ease;
 }
+.icons:hover {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+}
+
 
 #recherche{
     display: block;
-    width: auto;
     background-color: #E04750;
     border: 5px #2D2D36 solid;
     border-radius: 10px;
-
+    width: auto;
     text-align: center;
     color: aliceblue;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 a{
+    display: inline-flex;
+    flex-direction: row;
     text-decoration: none;
     font-family: 'Aliment PERSONAL USE', sans-serif;
-
+    align-items: center;
+    justify-content: center;
 }
 
 a:visited{
@@ -66,12 +74,15 @@ a:visited{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 75%;
     filter: blur(5px);
     -webkit-filter: blur(5px);
 }
+
 #InfoPage{
-    display:flex;
+    display: flex;
+    width:80%;
+ 
 
 }
 
@@ -87,21 +98,31 @@ a:visited{
     flex-flow: row-reverse;
 }
 
-#contact{
-    display: block;
+
+#contact_container{
+    display: flex;
     background-color: #E04750;
     border: 5px #2D2D36 solid;
     border-radius: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#contact{
+    display: inline-flex;
     width: fit-content;
-    text-align: center;
+    align-items: center;
     color: aliceblue;
+    justify-content: center;
+    align-content: center;
     margin-left: auto;
     margin-right: auto;
 }
-.nav{
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 
 .details {
     display: none;

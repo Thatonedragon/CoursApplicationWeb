@@ -32,54 +32,59 @@
 
         <div id="InfoPage">
 
-            <div id="Perso">
-                <p id="nbrvisiteur">Il y a actuellement 12 personnes, qui vistent le site</p>
-
-
-            </div>
-                <div id="Infos">
-                <table>
-                        <caption>Horaires d'ouverture</caption>
-                        <thread>
-                            <tr>
-                                <th class="tableau">Scène</th>
-                                <th>Vendredi</th>
-                                <th>Samedi</th>
-                                <th>Dimanche</th>
-                            </tr>
-                        </thread>
-                        <tbody>
-                            <tr>
-                                <th class="tableau">Night show</th>
-                                <td>19:00 - 00:00</td>
-                                <td>19:00 - 02:00</td>
-                                <td>19:00 - 03:00</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th class="tableau">Composition stage</th>
-                                <td>12:00 - 16:30</td>
-                                <td>12:00 - 17:30</td>
-                                <td>12:00 - 17:30</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                
+            <h2>Horaires d'ouverture</h2>
+            <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                <h2> Vendredi</h2>
+                <div class="details">
+                    <p>
+                        <ul>
+                            <li>12:00 - 16:30</li>>
+                            <li>>19:00 - 00:00</li>
+                        </ul>
+                    </p>
+                    <!-- Ajoutez plus de détails ici -->
                 </div>
-                <!-- Image cliquable  -->
+            </div>
+            <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                <h2>Samedi</h2>
+                <div class="details">
+                    <p>
+                        <ul>
+                            <li>12:00 - 17:30</li>>
+                            <li>>19:00 - 02:00</li>
+                        </ul>
+                    </p>
+                    <!-- Ajoutez plus de détails ici -->
+                </div>
+            </div>
     
-        </div> 
+            <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                <h2>Dimanche</h2>
+                <div class="details">
+                    <p>
+                        <ul>
+                            <li>12:00 - 17:30</li>>
+                            <li>>19:00 - 03:00</li>
+                        </ul>
+                    </p>
+                    <!-- Ajoutez plus de détails ici -->
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <div id="contact_container">
             <nav id="contact">
                 <!-- ouvre un éditeur de mail -->
                 <a href="mailto:unimakers.amiens@gmail.com?subject=WebMail%20test&body=Dear%20Unimakers">Mail</a> 
                 <!-- ouvre le composeur d'appel -->
                 <a href="">Télephone</a>
-                <a href="">Instagram</a>
-                <a href="">X</a>
-                <a href="">Youtube</a>
-                <a href="">Git-hub</a>
-                <a href=""><img class="icons" src="./media/LinkedIn_logo.png" alt="linkedIn"></a>
+                <a href="https://instagram.com/unimakers_amiens?igshid=NzZlODBkYWE4Ng=="><img class="icons" src="./media/Instagram_Glyph_Black.png" alt="Instagram"></a>
+                <a href=""><img class="icons" src="./media/twitter_logo-black.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/@UniMakersAmiens"><img class="icons" src="./media/yt_logo.png" alt="Youtube"></a>
+                <a href="https://github.com/Unimakers"><img class="icons" src="./media/github-mark.png" alt="Github"></a>
+                <a href="https://www.linkedin.com/company/unimakers-amiens"><img class="icons" src="./media/LinkedIn_logo.png" alt="linkedIn"></a>
                 <a href=""><img class="icons" src="./media/Facebook_Logo_Primary.png" alt="Facebook"></a>
             </nav>
 
@@ -87,62 +92,7 @@
 
     
 
-    <div id="InfoPage">
 
-        <h2>Horaires d'ouverture</h2>
-        <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
-            <h2> Vendredi</h2>
-            <div class="details">
-                <p>
-                    <ul>
-                        <li>12:00 - 16:30</li>>
-                        <li>>19:00 - 00:00</li>
-                    </ul>
-                </p>
-                <!-- Ajoutez plus de détails ici -->
-            </div>
-        </div>
-        <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
-            <h2>Samedi</h2>
-            <div class="details">
-                <p>
-                    <ul>
-                        <li>12:00 - 17:30</li>>
-                        <li>>19:00 - 02:00</li>
-                    </ul>
-                </p>
-                <!-- Ajoutez plus de détails ici -->
-            </div>
-        </div>
-
-        <div class="ouverture" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
-            <h2>Dimanche</h2>
-            <div class="details">
-                <p>
-                    <ul>
-                        <li>12:00 - 17:30</li>>
-                        <li>>19:00 - 03:00</li>
-                    </ul>
-                </p>
-                <!-- Ajoutez plus de détails ici -->
-            </div>
-        </div>
-        
-    </div>
-    <br>
-    <nav id="contact">
-        <!--ouvre un éditeur de mail -->
-        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=unimakers.amiens@gmail.com">Mail</a> 
-        <!--ouvre le composeur d'appel -->
-        <a href="">Télephone</a>
-        <a href="https://www.instagram.com/unimakers_amiens?igshid=NzZlODBkYWE4Ng%3D%3D">Instagram</a>
-        <a href="">X</a>
-        <a href="https://www.youtube.com/@UniMakersAmiens">Youtube</a>
-        <a href="https://github.com/Unimakers">Git-hub</a>
-        <a href="https://www.linkedin.com/company/unimakers-amiens">linkedIn</a>
-    </nav> 
 
     </body>
-
-
 </html>
