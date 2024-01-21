@@ -112,6 +112,8 @@ a:visited{
 }
 
 
+
+
 #contact{
     display: inline-flex;
     width: fit-content;
@@ -146,4 +148,26 @@ a:visited{
     display: flex;
     justify-content: center;
     font-family: 'Aliment PERSONAL USE', sans-serif;
+}
+
+#News{
+    color: green;
+    height: 500px;
+}
+
+#Articles{
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: flex-start; /* Adjust as needed */
+}
+
+.Posts{
+    
+    border: 10px solid #ff0000;
+    height: 400px;
+    width: 300px;
+}
+.postimg{
+    height: 50px;
+    width: 50px;
 }
