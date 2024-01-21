@@ -132,8 +132,8 @@ a:visited{
     color: aliceblue;
     justify-content: center;
     align-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -188,4 +188,10 @@ a:visited{
 .postimg{
     height: 200px;
     width: 200px;
+}
+
+
+.ContactNavbar{
+    margin-left: 10px;
+    margin-right: 10px;
 }
