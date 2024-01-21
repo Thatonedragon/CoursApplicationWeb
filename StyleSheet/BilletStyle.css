@@ -3,3 +3,21 @@
     color: antiquewhite;
     border-radius: 10px;
 }
+
+#formulaire{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#Resume_Container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

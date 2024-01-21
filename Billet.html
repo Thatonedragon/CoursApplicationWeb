@@ -9,49 +9,60 @@
     </head>
     <body onload="Onstart()">
 
-        <div>
-        <img id="logo" src="./media/LogoSeul.png">
-        <h1>MAKER-FEST</h1>
-           <nav id="recherche">
-            <a href="./index.html">Accueil</a>
-            <a href="./Actualité.html">Actualité</a>
-            <a href="">Partenaires</a>
-            <a href="">location</a>
-            <a href="">Qui sommes nous ?</a>
+        <div id="Header">
+
+            <img id="logo" src="./media/LogoSeul.png"><br>
+
+            <h2>10.11.12 mai 2024   .   Alpe d'huez-france</h2>
+
+            <h1>MAKER-FEST</h1>
+
+            <div id="Perso">
+                <p id="nbrvisiteur">Il y a actuellement 12 personnes, qui vistent le site</p>
+            </div>
+
+            <nav id="recherche">
+                <a class="HomeNavbar" href="./index.html">Accueil</a>
+                <a class="HomeNavbar" href="./Actualité.html">Actualité</a>
+                <a class="HomeNavbar" href="">location</a>
+                <a class="HomeNavbar" href="./PHP/Disponibilte.php">Disponibilté</a>
+                <a class="HomeNavbar" href="#contact">contact</a>
+                <a class="HomeNavbar" href="https://unimakers.fr">Qui sommes nous ?</a>
             </nav>
         </div>
-        <form method="post" onsubmit="return false;">
-            <ul>
-                <li>
-                    <label for="name">Quel est votre nom ?&nbsp;:</label>
-                    <input type="text" id="name" name="user_name" />
-                </li>
-                <li>
-                    <label for="nbplace">Combien de place voulais vous ?&nbsp;:</label>
-                     <input type="value" id="nbplace" name="nombre de place" />
-                </li>
-                <li>
-                     <label for="typepass">Quel type de pass ?&nbsp;:</label>
-                     <input name="type-normale" type="radio" value="1" id="type-pass1">normal</input>
-                     <input name="type-vip" type="radio" value="1" id="type-pass2">VIP</input>
-                </li>
-                <li>
-                    <label for="jour">Quel jour ?&nbsp;:</label>
-                    <input name="Vendredi" type="checkbox" value="1" id="jour1">Vendredi</input>
-                    <input name="samedi" type="checkbox" value="1" id="jour2">Samedi</input>
-                    <input name="Dimanche" type="checkbox" value="1" id="jour3">Dimanche</input>
-                  </li>
-                  <li>
-                    <label for="msg">Un commentaire ? &nbsp;:</label>
-                    <input id="msg" name="user_message"></input>
-                  </li>
-              </ul> 
-              <div class="button">
-                <button  id="SubmitButton" onclick="showSummary()">Envoyer le formulaire</button>
-              </div>
-        </form>
-
-        <div>
+        <div id="formulaire">
+            <form method="post" onsubmit="return false;">
+                <ul>
+                    <li>
+                        <label for="name">Quel est votre nom ?&nbsp;:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="nbplace">Combien de place voulais vous ?&nbsp;:</label>
+                        <input type="value" id="nbplace" name="nombre de place" />
+                    </li>
+                    <li>
+                        <label for="typepass">Quel type de pass ?&nbsp;:</label>
+                        <input name="type-normale" type="radio" value="1" id="type-pass1">normal</input>
+                        <input name="type-vip" type="radio" value="1" id="type-pass2">VIP</input>
+                    </li>
+                    <li>
+                        <label for="jour">Quel jour ?&nbsp;:</label>
+                        <input name="Vendredi" type="checkbox" value="1" id="jour1">Vendredi</input>
+                        <input name="samedi" type="checkbox" value="1" id="jour2">Samedi</input>
+                        <input name="Dimanche" type="checkbox" value="1" id="jour3">Dimanche</input>
+                    </li>
+                    <li>
+                        <label for="msg">Un commentaire ? &nbsp;:</label>
+                        <input id="msg" name="user_message"></input>
+                    </li>
+                </ul> 
+                <div class="button">
+                    <button  id="SubmitButton" onclick="showSummary()">Envoyer le formulaire</button>
+                </div>
+            </form>
+        </div>
+        <div id="Resume_Container">
             
             <p id="ResumeCommande">test</p>
 
