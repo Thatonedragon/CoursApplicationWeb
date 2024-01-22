@@ -10,31 +10,29 @@ try {
     // Construction du DSN (Data Source Name)
     $dsn = "mysql:host=$host;dbname=$dbname";
 
-    // Création de l'objet PDO avec le DSN, le nom d'utilisateur et le mot de passe
-    $pdo = new PDO($dsn, $user, $pass);
+    // Connexion à MySQL/MariaDB
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 
-    // On spécifie le type de caractère que l'on utilise
-    $pdo->query("SET NAMES 'utf8'");
+    // Sélectionner toutes les colonnes de la table 'jours'
+    $stmt = $pdo->query("SELECT * FROM jours");
 
-    // Défini le signalement des erreurs
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    // Récupérer les résultats
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Afficher les résultats dans un tableau HTML
+    echo '<table border="1">';
+    echo '<tr><th>Jour</th><th>Date</th></tr>';
+
+    foreach ($rows as $row) {
+        echo '<tr>';
+        echo '<td>' . $row['jour'] . '</td>';
+        echo '<td>' . $row['capacite'] . '</td>';
+        echo '</tr>';
+    }
+
+    echo '</table>';
 } catch (PDOException $e) {
-    // Message d'erreur si la connexion est impossible
-    die('ERREUR PDO : ' . $e->getMessage() . ' => (Vérifier les paramètres de connexion)');
+    // Gérer les erreurs de connexion ou d'exécution de la requête
+    die('ERREUR PDO : ' . $e->getMessage());
 }
-
-// Préparation de la requête
-$prep = $pdo->prepare( 'SELECT * FROM jours' );
-
-// Définition des valeurs
-//$prep->bindValue( 'maVariableSql1', 'maValeur' );
-
-// Exécution de la requête
-$prep->execute();
-
-// Récupération des résultats dans un tableau associatif
-$arrAll = $prep->fetchAll();
-
-
-
 ?>
