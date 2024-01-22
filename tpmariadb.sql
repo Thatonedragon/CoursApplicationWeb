@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3307
--- Généré le : lun. 22 jan. 2024 à 08:23
+-- Généré le : lun. 22 jan. 2024 à 08:25
 -- Version du serveur : 11.2.2-MariaDB
 -- Version de PHP : 8.2.13
 
@@ -20,6 +20,39 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `tpmariadb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `auth`
+--
+
+DROP TABLE IF EXISTS `auth`;
+CREATE TABLE IF NOT EXISTS `auth` (
+  `USER_ID` int(11) NOT NULL,
+  `LOGIN` char(20) NOT NULL,
+  `NOM` varchar(255) NOT NULL,
+  `PRENOM` varchar(255) NOT NULL,
+  `PASSWORD` varchar(255) NOT NULL,
+  PRIMARY KEY (`USER_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `detail`
+--
+
+DROP TABLE IF EXISTS `detail`;
+CREATE TABLE IF NOT EXISTS `detail` (
+  `RESERVATION_ID` int(11) NOT NULL,
+  `NOM_RESERVATION` varchar(255) NOT NULL,
+  `TYPE` char(1) NOT NULL,
+  `JOUR_RESERVATION` date NOT NULL,
+  `NB_PLACE` int(11) NOT NULL,
+  `COMMENTAIRE` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`RESERVATION_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
