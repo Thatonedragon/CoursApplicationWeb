@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Perform validation if needed
 
     // Connect to your database
-    $servername = "localhost";
+    $servername = "127.0.0.1:3307";
     $username = "root";
     $password = "";
     $dbname = "tpmariadb";
