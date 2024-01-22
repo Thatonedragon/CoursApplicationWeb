@@ -57,4 +57,41 @@ function showSummary() {
 
     // Display the summary in the <p> element
     document.getElementById("ResumeCommande").innerHTML  = summary;
+
+
+    
+}
+
+function submitForm() {
+  // Gather form data
+  var formData = {
+      user_name: document.getElementById('name').value,
+      nombre_de_place: document.getElementById('nbplace').value,
+      type_pass: document.querySelector('input[name="type-normale"]:checked') ? 'normal' : 'VIP',
+      jours: {
+          vendredi: document.getElementById('jour1').checked,
+          samedi: document.getElementById('jour2').checked,
+          dimanche: document.getElementById('jour3').checked
+      },
+      user_message: document.getElementById('msg').value
+  };
+
+  var data= JSON.stringify(formData);
+  request = new XMLHttpRequest();
+  request.open("POST","./PHP/Billet.php",true);
+  request.setRequestHeader("Content-Type","application/json");
+
+  request.onreadystatechange = function () {
+    if (request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            // Success! You can handle the response here
+            console.log('Success:', request.responseText);
+        } else {
+            // Error handling
+            console.error('Error:', request.status, request.statusText);
+        }
+    }
+  };
+
+  request.send(data);
 }
