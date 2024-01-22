@@ -61,7 +61,7 @@ try {
 
     // Afficher les résultats dans un tableau HTML
     echo '<table border="1">';
-    echo '<tr><th>Jour</th><th>places restantes</th></tr>';
+    echo '<tr><th>Jours</th><th>Places restantes</th></tr>';
 
     foreach ($rows as $row) {
         echo '<tr>';
