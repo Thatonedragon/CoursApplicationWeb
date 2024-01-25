@@ -37,37 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-function showSummary() {
-    // Get values from form fields and construct a summary
-    var name = document.getElementById("name").value;
-    var nbplace = document.getElementById("nbplace").value;
-    var typepass = document.getElementById("type-pass1").checked ? "normal" : "VIP";
-    var jours = [];
-    if (document.getElementById("jour1").checked) jours.push("Vendredi");
-    if (document.getElementById("jour2").checked) jours.push("Samedi");
-    if (document.getElementById("jour3").checked) jours.push("Dimanche");
-    var msg = document.getElementById("msg").value;
 
-    // Create a summary string
-    var summary = "Nom: " + name + "<br>";
-    summary += "Nombre de places: " + nbplace + "<br>";
-    summary += "Type de pass: " + typepass + "<br>";
-    summary += "Jours sélectionnés: " + jours.join(", ") + "<br>";
-    summary += "Commentaire: " + msg;
-
-    // Display the summary in the <p> element
-    document.getElementById("ResumeCommande").innerHTML  = summary;
-
-
-    
-}
 
 function submitForm() {
   // Gather form data
+
   var formData = {
       user_name: document.getElementById('name').value,
       nombre_de_place: document.getElementById('nbplace').value,
-      type_pass: document.querySelector('input[name="type-normale"]:checked') ? 'normal' : 'VIP',
+      type_pass: document.querySelector('input[name="type-normale"]:checked') ? '0' : '1',
       jours: {
           vendredi: document.getElementById('jour1').checked,
           samedi: document.getElementById('jour2').checked,
@@ -94,4 +72,32 @@ function submitForm() {
   };
 
   request.send(data);
+}
+
+function showSummary() {
+  // Get values from form fields and construct a summary
+  var name = document.getElementById("name").value;
+  var nbplace = document.getElementById("nbplace").value;
+  var typepass = document.getElementById("type-pass1").checked ? "0" : "1";
+  var jours = [];
+  if (document.getElementById("jour1").checked) jours.push("Vendredi");
+  if (document.getElementById("jour2").checked) jours.push("Samedi");
+  if (document.getElementById("jour3").checked) jours.push("Dimanche");
+  var msg = document.getElementById("msg").value;
+
+  // Create a summary string
+  var summary = "Nom: " + name + "<br>";
+  summary += "Nombre de places: " + nbplace + "<br>";
+  summary += "Type de pass: " + typepass + "<br>";
+  summary += "Jours sélectionnés: " + jours.join(", ") + "<br>";
+  summary += "Commentaire: " + msg;
+
+  submitForm();
+  // Display the summary in the <p> element
+  document.getElementById("ResumeCommande").innerHTML  = summary;
+
+
+
+
+  
 }
