@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3307
--- Généré le : lun. 22 jan. 2024 à 08:25
+-- Généré le : jeu. 25 jan. 2024 à 23:53
 -- Version du serveur : 11.2.2-MariaDB
 -- Version de PHP : 8.2.13
 
@@ -45,14 +45,23 @@ CREATE TABLE IF NOT EXISTS `auth` (
 
 DROP TABLE IF EXISTS `detail`;
 CREATE TABLE IF NOT EXISTS `detail` (
-  `RESERVATION_ID` int(11) NOT NULL,
+  `RESERVATION_ID` int(11) NOT NULL AUTO_INCREMENT,
   `NOM_RESERVATION` varchar(255) NOT NULL,
   `TYPE` char(1) NOT NULL,
-  `JOUR_RESERVATION` date NOT NULL,
+  `JOUR_RESERVATION` varchar(255) DEFAULT NULL,
   `NB_PLACE` int(11) NOT NULL,
   `COMMENTAIRE` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`RESERVATION_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Déchargement des données de la table `detail`
+--
+
+INSERT INTO `detail` (`RESERVATION_ID`, `NOM_RESERVATION`, `TYPE`, `JOUR_RESERVATION`, `NB_PLACE`, `COMMENTAIRE`) VALUES
+(1, 'Dylan', '1', '22-10-2202', 5, 'non'),
+(2, 'Dylan', '1', 'Vendredi', 5, 'non'),
+(3, 'Dylan', '1', 'Vendredi', 8, 'Oui');
 
 -- --------------------------------------------------------
 
