@@ -23,11 +23,12 @@ try {
     $status = $Data['user_message'];
     //les jours sont a faire, si plusieurs jours, plusieurs requettes,
     $day = $Data['jours'];
+    $userID= $Data['user_id'];
 
 
     if($day['vendredi']== true){
         
-        $sql = "INSERT INTO detail ( NOM_RESERVATION, TYPE, JOUR_RESERVATION, NB_PLACE, COMMENTAIRE) VALUES (:name, :anotherField, '2024-05-10', :number, :status)";
+        $sql = "INSERT INTO detail ( NOM_RESERVATION, TYPE, JOUR_RESERVATION, NB_PLACE, COMMENTAIRE, USER_ID) VALUES (:name, :anotherField, '2024-05-10', :number, :status,:user_id)";
 
         $stmt = $pdo->prepare($sql);
 
@@ -35,6 +36,7 @@ try {
         $stmt->bindParam(':anotherField', $anotherField);
         $stmt->bindParam(':number', $number);
         $stmt->bindParam(':status', $status);
+        $stmt->bindParam(':user_id',$userID);
 
         $stmt->execute();
     }

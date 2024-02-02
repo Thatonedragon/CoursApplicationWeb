@@ -195,3 +195,8 @@ a:visited{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.FontChange{
+    font-family: 'Gluten', sans-serif;
+    color: #2D2D36;
+}

@@ -1,9 +1,12 @@
 
+
+
 function Onstart(){ 
     var myButton = document.getElementById("SubmitButton");
     var Resume = document.getElementById("ResumeCommande");
     Resume.style.display = "none"
     myButton.style.display = "none";
+    console.log("test");
 
 }
 
@@ -17,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (inputField.value.trim() === "") {
         // If it's empty, hide the button
         myButton.style.display = "none";
+        
       } else {
         // If there is input, show the button
         myButton.style.display = "block";
@@ -37,10 +41,19 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
+var sessionData = 1;
 
 function submitForm() {
   // Gather form data
+
+  $.ajax({
+    url: "../PHP/session.php",
+    success: function(result){
+      sessionData = JSON.parse(result);
+      console.log(sessionData.id);
+    }
+  });
+
 
   var formData = {
       user_name: document.getElementById('name').value,
@@ -51,12 +64,13 @@ function submitForm() {
           samedi: document.getElementById('jour2').checked,
           dimanche: document.getElementById('jour3').checked
       },
-      user_message: document.getElementById('msg').value
+      user_message: document.getElementById('msg').value,
+      user_id: sessionData.id
   };
 
   var data= JSON.stringify(formData);
   request = new XMLHttpRequest();
-  request.open("POST","./PHP/Billet.php",true);
+  request.open("POST","./Billet.php",true);
   request.setRequestHeader("Content-Type","application/json");
 
   request.onreadystatechange = function () {
